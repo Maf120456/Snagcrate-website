@@ -1,0 +1,72 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SnagCrate - Best Deals</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
+    header { background: #27ae60; padding: 20px; color: white; text-align: center; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    .deals { display: flex; flex-wrap: wrap; justify-content: center; padding: 20px; }
+    .deal { background: white; border-radius: 5px; box-shadow: 0 0 5px #ccc; width: 250px; margin: 15px; padding: 15px; }
+[7/20, 3:39 AM] ChatGPT: .deal img { width: 100%; border-radius: 5px; }
+    .deal h3 { margin: 10px 0; }
+    .deal a { display: inline-block; margin-top: 10px; background: #27ae60; color: white; padding: 10px; border-radius: 5px; text-decoration: none; }
+    footer { text-align: center; padding: 20px; background: #ddd; margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SnagCrate</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Deals</a>
+      <a href="#">Sign Up</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="deals" id="deals-list">
+    <!-- Deals will be inserted here -->
+  </section>
+
+  <footer>
+    &copy; 2025 SnagCrate. All rights reserved.
+  </footer>
+
+  <script>
+    const deals = [
+      {
+        title: "Wireless Headphones 50% OFF",
+        image: "https://via.placeholder.com/250x150?text=Headphones",
+        link: "#"
+      },
+      {
+        title: "Smartwatch Deal $99",
+        image: "https://via.placeholder.com/250x150?text=Smartwatch",
+        link: "#"
+      },
+      {
+        title: "Gaming Chair 30% OFF",
+        image: "https://via.placeholder.com/250x150?text=Gaming+Chair",
+        link: "#"
+      }
+    ];
+
+    const dealsList = document.getElementById('deals-list');
+    deals.forEach(deal => {
+[7/20, 3:39 AM] ChatGPT: const dealDiv = document.createElement('div');
+      dealDiv.className = 'deal';
+      dealDiv.innerHTML = `
+        <img src="{deal.image}" alt="deal.title" />
+        <h3>{deal.title}</h3>
+        <a href="${deal.link}" target="_blank">Grab Deal</a>
+      `;
+      dealsList.appendChild(dealDiv);
+    });
+  </script>
+</body>
+</html>
+```
